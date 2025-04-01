@@ -1,3 +1,5 @@
+[![Java CI with Gradle](https://github.com/Elena-Yakovleva/JavaSQL/actions/workflows/gradle.yml/badge.svg)](https://github.com/Elena-Yakovleva/JavaSQL/actions/workflows/gradle.yml)
+
 ### Домашнее задание к занятию «3.2. SQL»
 
 #### Настройка CI     
