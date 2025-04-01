@@ -66,8 +66,8 @@ public class AuthTest {
         var verificationPage = loginPage.getValidLogin();
         verificationPage.randomVerify();
         verificationPage.getClosePage();
-        loginPage.getOpenPage();
 
+        loginPage.getOpenPage();
         verificationPage = loginPage.getValidLogin();
         verificationPage.randomVerify();
         verificationPage.getClosePage();
@@ -75,6 +75,7 @@ public class AuthTest {
         loginPage.getOpenPage();
         verificationPage = loginPage.getValidLogin();
         verificationPage.randomVerify();
+        verificationPage.getClosePage();
 
         loginPage.getOpenPage();
         verificationPage = loginPage.getValidLogin();
