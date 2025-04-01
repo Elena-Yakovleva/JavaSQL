@@ -60,7 +60,28 @@ public class AuthTest {
 
     }
 
+    @Test
+    @DisplayName("Превышение количества попыток ввода кода")
+    public void shouldExceededNumberCodeAttempts() {
+        var verificationPage = loginPage.getValidLogin();
+        verificationPage.randomVerify();
+        verificationPage.getClosePage();
+        loginPage.getOpenPage();
 
+        verificationPage = loginPage.getValidLogin();
+        verificationPage.randomVerify();
+        verificationPage.getClosePage();
+
+        loginPage.getOpenPage();
+        verificationPage = loginPage.getValidLogin();
+        verificationPage.randomVerify();
+
+        loginPage.getOpenPage();
+        verificationPage = loginPage.getValidLogin();
+        verificationPage.randomVerify();
+
+        assertTrue(verificationPage.verifyErrorNotification("Ошибка! \nПревышено количество попыток ввода кода!"));
+    }
 
 
 }

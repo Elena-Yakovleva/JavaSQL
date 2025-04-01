@@ -6,6 +6,7 @@ import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import java.sql.*;
+import java.util.concurrent.TimeUnit;
 
 public class SQLHelper {
 
@@ -23,6 +24,8 @@ public class SQLHelper {
 
     @SneakyThrows
     public static String getCode() {
+        TimeUnit.SECONDS.sleep(5);
+
         var codeSql = "SELECT code FROM auth_codes ORDER BY created DESC LIMIT 1";
         try (var conn = getConnection()) {
 

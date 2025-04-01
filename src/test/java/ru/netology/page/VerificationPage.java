@@ -1,6 +1,7 @@
 package ru.netology.page;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import ru.netology.data.DataHelper;
 
@@ -37,6 +38,10 @@ public class VerificationPage {
     public void randomVerify() {
         verify(generateRandomVerificationCode().getCode());
 
+    }
+
+    public void getClosePage() {
+        Selenide.closeWindow();
     }
 
 }

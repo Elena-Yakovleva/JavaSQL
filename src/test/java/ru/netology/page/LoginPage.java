@@ -1,6 +1,7 @@
 package ru.netology.page;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import ru.netology.data.DataHelper;
 
@@ -34,8 +35,10 @@ public class LoginPage {
         return new VerificationPage();
     }
 
-    public void loginRandomUser() {
-        login(getRandomUser());
+    public void getOpenPage(){
+        Selenide.open("http://localhost:9999/", LoginPage.class);
     }
+
+
 
 }

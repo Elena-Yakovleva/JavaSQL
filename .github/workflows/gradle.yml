@@ -25,7 +25,7 @@ jobs:
         # Запускаем SUT
         # & означает, что в фоновом режиме не блокируем терминал для запуска тестов(должен быть обязательно)
       - name: Start SUT 1
-        run: java -jar ./artifacts/app-deadline.jar &
+        run: java -jar ./artifacts/app-deadline.jar
 
       - name: Build with Gradle
         run: ./gradlew test --info -Dselenide.headless=true
