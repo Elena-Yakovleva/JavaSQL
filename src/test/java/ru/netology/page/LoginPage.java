@@ -19,9 +19,8 @@ public class LoginPage {
     private SelenideElement loginButton = $("[data-test-id='action-login']");
 
 
-    public boolean verifyErrorNotification(String expectedText) {
+    public void verifyErrorNotification(String expectedText) {
         errorNotification.shouldHave(exactText(expectedText)).shouldBe(Condition.visible);
-        return true;
     }
 
     public void login (DataHelper.AuthInfo info) {

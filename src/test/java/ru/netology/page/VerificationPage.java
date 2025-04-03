@@ -20,9 +20,8 @@ public class VerificationPage {
         verifyPageHeader.shouldBe(Condition.visible, Condition.text("Интернет Банк"));
     }
 
-    public boolean verifyErrorNotification(String expectedText) {
+    public void verifyErrorNotification(String expectedText) {
         errorNotification.shouldHave(exactText(expectedText)).shouldBe(Condition.visible);
-        return true;
     }
 
     public void verify(String verificationCode) {
