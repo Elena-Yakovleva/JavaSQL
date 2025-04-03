@@ -39,8 +39,4 @@ public class VerificationPage {
 
     }
 
-    public void getClosePage() {
-        Selenide.closeWindow();
-    }
-
 }

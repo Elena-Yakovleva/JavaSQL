@@ -5,6 +5,7 @@ import org.junit.jupiter.api.*;
 
 import ru.netology.page.LoginPage;
 
+import static com.codeborne.selenide.Selenide.open;
 import static ru.netology.data.DataHelper.getRandomUser;
 import static ru.netology.data.SQLHelper.*;
 
@@ -16,7 +17,7 @@ public class AuthTest {
 
     @BeforeEach
     public void setup() {
-        loginPage = Selenide.open("http://localhost:9999/", LoginPage.class);
+        loginPage = open("http://localhost:9999/", LoginPage.class);
     }
 
     @AfterAll
@@ -59,19 +60,16 @@ public class AuthTest {
     public void shouldExceededNumberCodeAttempts() {
         var verificationPage = loginPage.getValidLogin();
         verificationPage.randomVerify();
-        verificationPage.getClosePage();
 
-        loginPage.getOpenPage();
+        open("http://localhost:9999/");
         verificationPage = loginPage.getValidLogin();
         verificationPage.randomVerify();
-        verificationPage.getClosePage();
 
-        loginPage.getOpenPage();
+        open("http://localhost:9999/");
         verificationPage = loginPage.getValidLogin();
         verificationPage.randomVerify();
-        verificationPage.getClosePage();
 
-        loginPage.getOpenPage();
+        open("http://localhost:9999/");
         verificationPage = loginPage.getValidLogin();
         verificationPage.randomVerify();
 

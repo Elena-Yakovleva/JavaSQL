@@ -34,9 +34,6 @@ public class LoginPage {
         return new VerificationPage();
     }
 
-    public void getOpenPage(){
-        Selenide.open("http://localhost:9999/", LoginPage.class);
-    }
 
 
 
